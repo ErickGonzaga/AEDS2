@@ -1,0 +1,179 @@
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+class games {
+    static SimpleDateFormat default_dateFormat = new SimpleDateFormat("MMM/yyyy", Locale.ENGLISH);
+    // __________ Declarando Atributos __________
+
+    private String name, owners, website, developers;
+    private ArrayList<String> languages, genres;
+    private Date release_date;
+    private int app_id, age, dlcs, avg_pt;
+    private float price, upvotes;
+    private boolean windows, mac, linux;
+
+    // construtor
+    public games(String name, String owners, String website, String developers, ArrayList<String> languages,
+            ArrayList<String> genres,
+            Date release_date, int app_id, int age, int dlcs, int avg_pt, float price, float upvotes,
+            boolean windows, boolean mac, boolean linux) {
+
+        this.name = name;
+        this.owners = owners;
+        this.website = website;
+        this.developers = developers;
+        this.languages = languages;
+        this.genres = genres;
+        this.release_date = release_date;
+        this.app_id = app_id;
+        this.age = age;
+        this.dlcs = dlcs;
+        this.upvotes = upvotes;
+        this.avg_pt = avg_pt;
+        this.price = price;
+        this.windows = windows;
+        this.mac = mac;
+        this.linux = linux;
+
+    }
+
+    // __________ Sets __________
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setOwners(String owners) {
+        this.owners = owners;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public void setDevelopers(String developers) {
+        this.developers = developers;
+    }
+
+    public void setLanguages(ArrayList<String> languages) {
+        this.languages = languages;
+    }
+
+    public void setGenres(ArrayList<String> genres) {
+        this.genres = genres;
+    }
+
+    public void setApp_id(int app_id) {
+        this.app_id = app_id;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setDlcs(int dlcs) {
+        this.dlcs = dlcs;
+    }
+
+    public void setAvg_pt(int avg_pt) {
+        this.avg_pt = avg_pt;
+    }
+
+    public void setUpvotes(float upvotes) {
+        this.upvotes = upvotes;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public void setWindows(Boolean windows) {
+        this.windows = windows;
+    }
+
+    public void setMac(Boolean mac) {
+        this.mac = mac;
+    }
+
+    public void setLinux(Boolean linux) {
+        this.linux = linux;
+    }
+
+    // __________ Gets __________
+    public String getName() {
+        return this.name;
+    }
+
+    public String getOwners() {
+        return this.owners;
+    }
+
+    public String getWebsite() {
+        return this.website;
+    }
+
+    public String getDevelopers() {
+        return this.developers;
+    }
+
+    public ArrayList<String> getLanguages() {
+        return this.languages;
+    }
+
+    public ArrayList<String> getGenres() {
+        return this.genres;
+    }
+
+    public int getApp_id() {
+        return this.app_id;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public int getDlcs() {
+        return this.dlcs;
+    }
+
+    public int getAvg_pt() {
+        return this.avg_pt;
+    }
+
+    public float getUpvotes() {
+        return this.upvotes;
+    }
+
+    public float getPrice() {
+        return this.price;
+    }
+
+    public boolean getWindows() {
+        return this.windows;
+    }
+
+    public boolean getMac() {
+        return this.mac;
+    }
+
+    public boolean getLinux() {
+        return this.linux;
+    }
+
+    public static boolean isFim(String entrada) {
+        return (entrada.length() == 3 && entrada.charAt(0) == 'F' && entrada.charAt(1) == 'I'
+                && entrada.charAt(2) == 'M');
+    }
+
+    public static void main(String[] args) {
+        String entrada = new String();
+
+        while (true) {
+            entrada = MyIO.readLine();
+
+            if (isFim(entrada) == true)
+                break;
+
+        }
+
+    }
+}
